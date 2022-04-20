@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/slnx.sqlite
+/.vs/Demo_React_App/v17
+/.vs/Demo_React_App/project-colors.json
+/.vs/Demo_React_App/DesignTimeBuild
