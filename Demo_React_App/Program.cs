@@ -1,4 +1,15 @@
+using System.Net;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+//#if !DEBUG
+//        builder.WebHost.ConfigureKestrel(options =>
+//                    {
+//                        var port = Convert.ToInt32(Environment.GetEnvironmentVariable("PORT") ?? "8080");
+//                        options.Listen(IPAddress.Any, port);
+//                    });
+//#endif
 
 // Add services to the container.
 
