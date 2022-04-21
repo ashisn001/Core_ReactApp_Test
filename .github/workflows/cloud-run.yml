@@ -40,6 +40,7 @@ jobs:
 
     - name: Build and Push Container For ${{ env.REACTCOREDEMOSVC }}
       run: |-
+        echo ${{ env.PROJECT_ID }}
         cd Demo_React_App
         docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.REACTCOREDEMOSVC }}:${{ github.sha }} . --file Dockerfile
     
