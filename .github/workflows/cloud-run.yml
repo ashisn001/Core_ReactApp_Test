@@ -40,8 +40,8 @@ jobs:
 
     - name: Build and Push Container For ${{ env.REACTCOREDEMOSVC }}
       run: |-
-        cd Core_ReactApp_Test
-        docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.REACTCOREDEMOSVC }}:${{ github.sha }} . --file Demo_React_App/Dockerfile
+        cd Demo_React_App
+        docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.REACTCOREDEMOSVC }}:${{ github.sha }} . --file Dockerfile
     
     - name: Authorize Docker push For ${{ env.REACTCOREDEMOSVC }}
       run: gcloud auth configure-docker -q
