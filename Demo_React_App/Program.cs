@@ -11,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 //                    });
 //#endif
 
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    var port = Convert.ToInt32("8080");
+    serverOptions.Listen(IPAddress.Any, port);
+});
+
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
